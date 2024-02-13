@@ -6,6 +6,8 @@ const Listing = require("../models/listing.js");
 const {isLoggedIn,isOwner,validateListing,isReviewAuthor}=require("../middleware.js");
 
 const listingController=require("../controllers/listings.js");
+
+// Store setup for Cloudinary
 const multer  = require('multer');
 const {storage}=require("../cloudConfig.js");
 const upload = multer({storage });
