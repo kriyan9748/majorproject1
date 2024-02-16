@@ -38,6 +38,6 @@ const upload = multer({storage });
   router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(listingController.renderEditForm));
 
 
-
+console.log(process.env.CLOUD_NAME);
 
     module.exports=router;

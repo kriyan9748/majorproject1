@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV ==="production")
+if(process.env.NODE_ENV !="production")
 {
   require("dotenv").config();
 }
@@ -14,6 +14,7 @@ api_secret:process.env.CLOUD_API_SECRET
 
     
 });
+
 
 
 const storage = new CloudinaryStorage({
