@@ -1,7 +1,6 @@
-if(process.env.NODE_ENV !="production")
-{
+
   require("dotenv").config();
-}
+
 
 
 const cloudinary = require('cloudinary').v2;
@@ -25,7 +24,7 @@ const storage = new CloudinaryStorage({
    
     },
   });
-
+console.log(process.env.CLOUD_NAME);
   module.exports={
     cloudinary,
     storage,
