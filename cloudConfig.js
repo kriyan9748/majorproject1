@@ -15,7 +15,6 @@ api_secret:process.env.CLOUD_API_SECRET
 });
 
 
-
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
@@ -24,7 +23,7 @@ const storage = new CloudinaryStorage({
    
     },
   });
-console.log(process.env.CLOUD_NAME);
+
   module.exports={
     cloudinary,
     storage,

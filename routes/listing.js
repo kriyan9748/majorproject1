@@ -7,6 +7,7 @@ const {isLoggedIn,isOwner,validateListing,isReviewAuthor}=require("../middleware
 
 const listingController=require("../controllers/listings.js");
 
+
 // Store setup for Cloudinary
 const multer  = require('multer');
 const {storage}=require("../cloudConfig.js");
@@ -38,6 +39,5 @@ const upload = multer({storage });
   router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(listingController.renderEditForm));
 
 
-console.log(process.env.CLOUD_NAME);
 
     module.exports=router;
